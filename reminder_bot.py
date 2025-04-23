@@ -3,9 +3,9 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import time
 import os
 
-BOT_TOKEN = os.getenv("7454315114:AAGC5qF8xN0ElDb32jJTv4l7zWAojUXvtoY
-")
-CHAT_ID = int(os.getenv("-4709648795"))
+BOT_TOKEN = os.getenv(7454315114:AAGC5qF8xN0ElDb32jJTv4l7zWAojUXvtoY
+)
+CHAT_ID = int(os.getenv(-4709648795))
 
 bot = Bot(token=BOT_TOKEN)
 scheduler = BlockingScheduler()
