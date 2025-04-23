@@ -1,12 +1,14 @@
 from telegram import Bot
 from apscheduler.schedulers.blocking import BlockingScheduler
 import os
+import pytz  # 👉 Thêm dòng này
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID"))
 
 bot = Bot(token=BOT_TOKEN)
-scheduler = BlockingScheduler()
+# 👉 Chỉ định múi giờ Việt Nam
+scheduler = BlockingScheduler(timezone=pytz.timezone("Asia/Ho_Chi_Minh"))
 
 def send_reminder():
     message = (
